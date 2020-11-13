@@ -100,7 +100,7 @@
 </div>
 <!-- /Restaurants -->
 
-<!-- Feedbacks -->
+<!-- Testimonials -->
 <div class="section-feedbacks">
   <figure class="ketchup-img"></figure>
   <h1 class="feed-title">“El mejor lugar para degustar en familia y amigos!”</h1>
@@ -112,7 +112,51 @@
     <button class="btn-right"></button>
   </div>
 </div>
-<!-- /Feedbacks -->
+<!-- /Testimonials -->
 
+<!-- Contact Us -->
+<div class="section-contact-us">
+  <!-- titles -->
+  <h1 class="contact-title">Cuentanos tu experiencia</h1>
+  <p class="contact-paragraph">Don't miss out on our great offers & Receive deals from all our top restaurants via e-mail. </p>
+
+  <!-- Form -->
+  <form class="contact-form" action="">
+    <div class="columns">
+      <div class="column">
+        <!-- Name y Last Name -->
+        <div class="field is-active">
+          <label class="label" for="txt_name">Nombre y Apellido</label>
+          <div class="control">
+            <input class="input" id="txt_name" type="text" placeholder="John Doe">
+          </div>
+        </div>
+
+        <!-- Email -->
+        <div class="field">
+          <label class="label">Correo Electronico</label>
+          <div class="control">
+            <input class="input" id="txt_email" type="text" placeholder="j.doe@correo.com">
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <!-- Message -->
+        <div class="field">
+          <label class="label">Mensaje</label>
+          <div class="control">
+            <textarea class="textarea" id="txt_message" rows="4" placeholder="El día de ahora mi experiencia fue..."></textarea>
+          </div>
+        </div>
+        
+        <div class="submit-container">
+          <button class="button" type="submit">Enviar comentarios</button>
+        </div>
+      </div>
+    </div>
+  </form>
+
+</div>
+<!-- /Contact Us -->
 
 <?php get_footer(); ?>

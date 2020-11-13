@@ -1,0 +1,59 @@
+
+.section-contact-us
+  background: $color-primary
+  min-height: 610px
+
+  padding-top: 112px
+  padding-left: 16px
+  padding-right: 16px
+
+  h1.contact-title    
+    @extend %primaryTitle    
+    font-size: 36px
+    text-align: center
+    margin: 0px auto
+    max-width: 744px
+    margin-bottom: 0px
+    position: relative
+    color: white
+
+  p.contact-paragraph
+    @extend %normalParagraph
+    margin: 0px auto
+    margin-top: 19px
+    max-width: 698px
+    font-size: 24px
+    text-align: center
+    color: white
+
+  form.contact-form
+    margin: 0 auto
+    max-width: 944px
+    margin-top: 40px
+
+    .field    
+      label
+        @extend %normalParagraph 
+        color: white
+        font-size: 12px
+
+      input,textarea
+        @extend %contactInput
+      
+      textarea
+        min-height: 132px
+
+      &.is-active
+        label,input,textarea
+          color: $color-active-input !important        
+        input,textarea
+           border: 1px solid $color-active-input !important
+
+    .submit-container
+      text-align: right
+      button
+        @extend %normalParagraph 
+        background: $color-splash
+        border: none
+        width: 196px
+        color: $color-primary
