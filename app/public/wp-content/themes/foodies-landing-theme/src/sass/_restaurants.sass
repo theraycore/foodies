@@ -1,0 +1,95 @@
+
+.section-restaurants
+  margin-top: 70px
+
+  .left-form
+    h1.title
+      @extend %primaryTitle
+      text-align: center
+      font-size: 40px
+
+    .restaurants-types
+      border: 1px solid #C4C4C4
+      margin-bottom: 0px
+      
+      .column        
+        height: 64px
+        padding-top: 14px
+        text-align: center
+
+        &.is-active
+          background: $color-primary
+
+          p          
+            color: white
+
+            .para-llevar-icon
+              width: 25px
+              height: 25px
+              background: green
+
+        p
+          @extend %secondaryTitle      
+          font-size: 25px         
+
+    .search-container      
+      height: 50px
+      border: 1px solid #C4C4C4
+      margin-right: -12px
+
+      .media-left
+        margin-left: 105px
+        margin-top: 8px
+
+        p.image
+          background: $search_icon
+          background-size: 24px
+          background-repeat: no-repeat
+          background-position-y: 5px
+
+      .map_search_input  
+        @extend %normalParagraph      
+        height: 48px
+        width: 100%
+        border: none
+
+    .search-results
+      margin-right: -12px
+      margin-bottom: -11px
+      min-height: 423px
+      max-height: 423px      
+      padding-left: 102px
+      padding-right: 22px
+      position: relative
+      overflow: hidden
+
+      .card
+        margin-top: 15px
+        border: 1px solid $color-primary
+        box-shadow: none
+
+        &.is-selected
+          border: none
+          background: $color-address-selected
+        
+        .card-content
+          padding-top: 15px
+          padding-left: 22px
+          padding-bottom: 14px
+
+          label.title
+            @extend %secondaryTitle
+            font-size: 20px
+            margin-top: 0px
+
+          p.address
+            @extend %normalParagraph
+            margin-top: 5px
+            color: $color-primary
+            font-size: 16px
+
+  .right-map
+    background-image: $map_img
+    background-size: 100%
+    min-height: 609px
+    position: relative
