@@ -37,10 +37,6 @@
 </footer>
 <!-- /Footer -->
 
-<!-- Vue App Close -->
-</div>
-<!-- /Vue App Close -->
-
 <?php wp_footer(); ?>
 </body>
 </html>
