@@ -1,0 +1,117 @@
+[14-Nov-2020 16:00:02 UTC] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in /Users/theraycore/Local Sites/foodies/app/public/wp-content/themes/foodies-landing-theme/functions.php:39
+Stack trace:
+#0 /Users/theraycore/Local Sites/foodies/app/public/wp-includes/class-wp-hook.php(287): get_locations_from_api('')
+#1 /Users/theraycore/Local Sites/foodies/app/public/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 /Users/theraycore/Local Sites/foodies/app/public/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /Users/theraycore/Local Sites/foodies/app/public/wp-admin/admin-ajax.php(176): do_action('wp_ajax_get_loc...')
+#4 {main}
+  thrown in /Users/theraycore/Local Sites/foodies/app/public/wp-content/themes/foodies-landing-theme/functions.php on line 39
+[14-Nov-2020 16:14:21 UTC] PHP Parse error:  syntax error, unexpected ''field_5faff9ac8c4d3'' (T_CONSTANT_ENCAPSED_STRING), expecting ']' in /Users/theraycore/Local Sites/foodies/app/public/wp-content/themes/foodies-landing-theme/functions.php on line 58
+[14-Nov-2020 16:20:25 UTC] PHP Parse error:  syntax error, unexpected ',' in /Users/theraycore/Local Sites/foodies/app/public/wp-content/themes/foodies-landing-theme/functions.php on line 45
+[14-Nov-2020 17:14:40 UTC] PHP Warning:  Use of undefined constant Hello - assumed 'Hello' (this will throw an Error in a future version of PHP) in /Users/theraycore/Local Sites/foodies/app/public/wp-content/themes/foodies-landing-theme/functions.php on line 205
+[14-Nov-2020 17:14:40 UTC] PHP Stack trace:
+[14-Nov-2020 17:14:40 UTC] PHP   1. {main}() /Users/theraycore/Local Sites/foodies/app/public/wp-admin/admin-ajax.php:0
+[14-Nov-2020 17:14:40 UTC] PHP   2. do_action() /Users/theraycore/Local Sites/foodies/app/public/wp-admin/admin-ajax.php:176
+[14-Nov-2020 17:14:40 UTC] PHP   3. WP_Hook->do_action() /Users/theraycore/Local Sites/foodies/app/public/wp-includes/plugin.php:478
+[14-Nov-2020 17:14:40 UTC] PHP   4. WP_Hook->apply_filters() /Users/theraycore/Local Sites/foodies/app/public/wp-includes/class-wp-hook.php:311
+[14-Nov-2020 17:14:40 UTC] PHP   5. get_menus_from_api() /Users/theraycore/Local Sites/foodies/app/public/wp-includes/class-wp-hook.php:287
+[14-Nov-2020 17:15:07 UTC] PHP Warning:  Use of undefined constant Hello - assumed 'Hello' (this will throw an Error in a future version of PHP) in /Users/theraycore/Local Sites/foodies/app/public/wp-content/themes/foodies-landing-theme/functions.php on line 206
+[14-Nov-2020 17:15:07 UTC] PHP Stack trace:
+[14-Nov-2020 17:15:07 UTC] PHP   1. {main}() /Users/theraycore/Local Sites/foodies/app/public/wp-admin/admin-ajax.php:0
+[14-Nov-2020 17:15:07 UTC] PHP   2. do_action() /Users/theraycore/Local Sites/foodies/app/public/wp-admin/admin-ajax.php:176
+[14-Nov-2020 17:15:07 UTC] PHP   3. WP_Hook->do_action() /Users/theraycore/Local Sites/foodies/app/public/wp-includes/plugin.php:478
+[14-Nov-2020 17:15:07 UTC] PHP   4. WP_Hook->apply_filters() /Users/theraycore/Local Sites/foodies/app/public/wp-includes/class-wp-hook.php:311
+[14-Nov-2020 17:15:07 UTC] PHP   5. get_menus_from_api() /Users/theraycore/Local Sites/foodies/app/public/wp-includes/class-wp-hook.php:287
+[14-Nov-2020 17:15:22 UTC] PHP Warning:  Use of undefined constant Hello - assumed 'Hello' (this will throw an Error in a future version of PHP) in /Users/theraycore/Local Sites/foodies/app/public/wp-content/themes/foodies-landing-theme/functions.php on line 206
+[14-Nov-2020 17:15:22 UTC] PHP Stack trace:
+[14-Nov-2020 17:15:22 UTC] PHP   1. {main}() /Users/theraycore/Local Sites/foodies/app/public/wp-admin/admin-ajax.php:0
+[14-Nov-2020 17:15:22 UTC] PHP   2. do_action() /Users/theraycore/Local Sites/foodies/app/public/wp-admin/admin-ajax.php:176
+[14-Nov-2020 17:15:22 UTC] PHP   3. WP_Hook->do_action() /Users/theraycore/Local Sites/foodies/app/public/wp-includes/plugin.php:478
+[14-Nov-2020 17:15:22 UTC] PHP   4. WP_Hook->apply_filters() /Users/theraycore/Local Sites/foodies/app/public/wp-includes/class-wp-hook.php:311
+[14-Nov-2020 17:15:22 UTC] PHP   5. get_menus_from_api() /Users/theraycore/Local Sites/foodies/app/public/wp-includes/class-wp-hook.php:287
+[14-Nov-2020 17:15:50 UTC] PHP Warning:  Use of undefined constant Hello - assumed 'Hello' (this will throw an Error in a future version of PHP) in /Users/theraycore/Local Sites/foodies/app/public/wp-content/themes/foodies-landing-theme/functions.php on line 205
+[14-Nov-2020 17:15:50 UTC] PHP Stack trace:
+[14-Nov-2020 17:15:50 UTC] PHP   1. {main}() /Users/theraycore/Local Sites/foodies/app/public/wp-admin/admin-ajax.php:0
+[14-Nov-2020 17:15:50 UTC] PHP   2. do_action() /Users/theraycore/Local Sites/foodies/app/public/wp-admin/admin-ajax.php:176
+[14-Nov-2020 17:15:50 UTC] PHP   3. WP_Hook->do_action() /Users/theraycore/Local Sites/foodies/app/public/wp-includes/plugin.php:478
+[14-Nov-2020 17:15:50 UTC] PHP   4. WP_Hook->apply_filters() /Users/theraycore/Local Sites/foodies/app/public/wp-includes/class-wp-hook.php:311
+[14-Nov-2020 17:15:50 UTC] PHP   5. get_menus_from_api() /Users/theraycore/Local Sites/foodies/app/public/wp-includes/class-wp-hook.php:287
+[14-Nov-2020 17:16:34 UTC] PHP Warning:  Use of undefined constant Hello - assumed 'Hello' (this will throw an Error in a future version of PHP) in /Users/theraycore/Local Sites/foodies/app/public/wp-content/themes/foodies-landing-theme/functions.php on line 205
+[14-Nov-2020 17:16:34 UTC] PHP Stack trace:
+[14-Nov-2020 17:16:34 UTC] PHP   1. {main}() /Users/theraycore/Local Sites/foodies/app/public/wp-admin/admin-ajax.php:0
+[14-Nov-2020 17:16:34 UTC] PHP   2. do_action() /Users/theraycore/Local Sites/foodies/app/public/wp-admin/admin-ajax.php:176
+[14-Nov-2020 17:16:34 UTC] PHP   3. WP_Hook->do_action() /Users/theraycore/Local Sites/foodies/app/public/wp-includes/plugin.php:478
+[14-Nov-2020 17:16:34 UTC] PHP   4. WP_Hook->apply_filters() /Users/theraycore/Local Sites/foodies/app/public/wp-includes/class-wp-hook.php:311
+[14-Nov-2020 17:16:34 UTC] PHP   5. get_menus_from_api() /Users/theraycore/Local Sites/foodies/app/public/wp-includes/class-wp-hook.php:287
+[14-Nov-2020 17:16:39 UTC] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /Users/theraycore/Local Sites/foodies/app/public/wp-content/themes/foodies-landing-theme/functions.php on line 193
+[14-Nov-2020 17:16:43 UTC] PHP Warning:  Use of undefined constant Hello - assumed 'Hello' (this will throw an Error in a future version of PHP) in /Users/theraycore/Local Sites/foodies/app/public/wp-content/themes/foodies-landing-theme/functions.php on line 205
+[14-Nov-2020 17:16:43 UTC] PHP Stack trace:
+[14-Nov-2020 17:16:43 UTC] PHP   1. {main}() /Users/theraycore/Local Sites/foodies/app/public/wp-admin/admin-ajax.php:0
+[14-Nov-2020 17:16:43 UTC] PHP   2. do_action() /Users/theraycore/Local Sites/foodies/app/public/wp-admin/admin-ajax.php:176
+[14-Nov-2020 17:16:43 UTC] PHP   3. WP_Hook->do_action() /Users/theraycore/Local Sites/foodies/app/public/wp-includes/plugin.php:478
+[14-Nov-2020 17:16:43 UTC] PHP   4. WP_Hook->apply_filters() /Users/theraycore/Local Sites/foodies/app/public/wp-includes/class-wp-hook.php:311
+[14-Nov-2020 17:16:43 UTC] PHP   5. get_menus_from_api() /Users/theraycore/Local Sites/foodies/app/public/wp-includes/class-wp-hook.php:287
+[14-Nov-2020 17:16:53 UTC] PHP Warning:  Use of undefined constant Hello - assumed 'Hello' (this will throw an Error in a future version of PHP) in /Users/theraycore/Local Sites/foodies/app/public/wp-content/themes/foodies-landing-theme/functions.php on line 205
+[14-Nov-2020 17:16:53 UTC] PHP Stack trace:
+[14-Nov-2020 17:16:53 UTC] PHP   1. {main}() /Users/theraycore/Local Sites/foodies/app/public/wp-admin/admin-ajax.php:0
+[14-Nov-2020 17:16:53 UTC] PHP   2. do_action() /Users/theraycore/Local Sites/foodies/app/public/wp-admin/admin-ajax.php:176
+[14-Nov-2020 17:16:53 UTC] PHP   3. WP_Hook->do_action() /Users/theraycore/Local Sites/foodies/app/public/wp-includes/plugin.php:478
+[14-Nov-2020 17:16:53 UTC] PHP   4. WP_Hook->apply_filters() /Users/theraycore/Local Sites/foodies/app/public/wp-includes/class-wp-hook.php:311
+[14-Nov-2020 17:16:53 UTC] PHP   5. get_menus_from_api() /Users/theraycore/Local Sites/foodies/app/public/wp-includes/class-wp-hook.php:287
+[14-Nov-2020 17:17:37 UTC] PHP Warning:  Use of undefined constant Hello - assumed 'Hello' (this will throw an Error in a future version of PHP) in /Users/theraycore/Local Sites/foodies/app/public/wp-content/themes/foodies-landing-theme/functions.php on line 205
+[14-Nov-2020 17:17:37 UTC] PHP Stack trace:
+[14-Nov-2020 17:17:37 UTC] PHP   1. {main}() /Users/theraycore/Local Sites/foodies/app/public/wp-admin/admin-ajax.php:0
+[14-Nov-2020 17:17:37 UTC] PHP   2. do_action() /Users/theraycore/Local Sites/foodies/app/public/wp-admin/admin-ajax.php:176
+[14-Nov-2020 17:17:37 UTC] PHP   3. WP_Hook->do_action() /Users/theraycore/Local Sites/foodies/app/public/wp-includes/plugin.php:478
+[14-Nov-2020 17:17:37 UTC] PHP   4. WP_Hook->apply_filters() /Users/theraycore/Local Sites/foodies/app/public/wp-includes/class-wp-hook.php:311
+[14-Nov-2020 17:17:37 UTC] PHP   5. get_menus_from_api() /Users/theraycore/Local Sites/foodies/app/public/wp-includes/class-wp-hook.php:287
+[14-Nov-2020 17:18:07 UTC] PHP Warning:  Use of undefined constant Hello - assumed 'Hello' (this will throw an Error in a future version of PHP) in /Users/theraycore/Local Sites/foodies/app/public/wp-content/themes/foodies-landing-theme/functions.php on line 205
+[14-Nov-2020 17:18:07 UTC] PHP Stack trace:
+[14-Nov-2020 17:18:07 UTC] PHP   1. {main}() /Users/theraycore/Local Sites/foodies/app/public/wp-admin/admin-ajax.php:0
+[14-Nov-2020 17:18:07 UTC] PHP   2. do_action() /Users/theraycore/Local Sites/foodies/app/public/wp-admin/admin-ajax.php:176
+[14-Nov-2020 17:18:07 UTC] PHP   3. WP_Hook->do_action() /Users/theraycore/Local Sites/foodies/app/public/wp-includes/plugin.php:478
+[14-Nov-2020 17:18:07 UTC] PHP   4. WP_Hook->apply_filters() /Users/theraycore/Local Sites/foodies/app/public/wp-includes/class-wp-hook.php:311
+[14-Nov-2020 17:18:07 UTC] PHP   5. get_menus_from_api() /Users/theraycore/Local Sites/foodies/app/public/wp-includes/class-wp-hook.php:287
+[14-Nov-2020 17:23:27 UTC] PHP Warning:  Use of undefined constant Hello - assumed 'Hello' (this will throw an Error in a future version of PHP) in /Users/theraycore/Local Sites/foodies/app/public/wp-content/themes/foodies-landing-theme/functions.php on line 205
+[14-Nov-2020 17:23:27 UTC] PHP Stack trace:
+[14-Nov-2020 17:23:27 UTC] PHP   1. {main}() /Users/theraycore/Local Sites/foodies/app/public/wp-admin/admin-ajax.php:0
+[14-Nov-2020 17:23:27 UTC] PHP   2. do_action() /Users/theraycore/Local Sites/foodies/app/public/wp-admin/admin-ajax.php:191
+[14-Nov-2020 17:23:27 UTC] PHP   3. WP_Hook->do_action() /Users/theraycore/Local Sites/foodies/app/public/wp-includes/plugin.php:478
+[14-Nov-2020 17:23:27 UTC] PHP   4. WP_Hook->apply_filters() /Users/theraycore/Local Sites/foodies/app/public/wp-includes/class-wp-hook.php:311
+[14-Nov-2020 17:23:27 UTC] PHP   5. get_menus_from_api() /Users/theraycore/Local Sites/foodies/app/public/wp-includes/class-wp-hook.php:287
+[14-Nov-2020 17:24:26 UTC] PHP Warning:  Use of undefined constant Hello - assumed 'Hello' (this will throw an Error in a future version of PHP) in /Users/theraycore/Local Sites/foodies/app/public/wp-content/themes/foodies-landing-theme/functions.php on line 205
+[14-Nov-2020 17:24:26 UTC] PHP Stack trace:
+[14-Nov-2020 17:24:26 UTC] PHP   1. {main}() /Users/theraycore/Local Sites/foodies/app/public/wp-admin/admin-ajax.php:0
+[14-Nov-2020 17:24:26 UTC] PHP   2. do_action() /Users/theraycore/Local Sites/foodies/app/public/wp-admin/admin-ajax.php:191
+[14-Nov-2020 17:24:26 UTC] PHP   3. WP_Hook->do_action() /Users/theraycore/Local Sites/foodies/app/public/wp-includes/plugin.php:478
+[14-Nov-2020 17:24:26 UTC] PHP   4. WP_Hook->apply_filters() /Users/theraycore/Local Sites/foodies/app/public/wp-includes/class-wp-hook.php:311
+[14-Nov-2020 17:24:26 UTC] PHP   5. get_menus_from_api() /Users/theraycore/Local Sites/foodies/app/public/wp-includes/class-wp-hook.php:287
+[14-Nov-2020 17:25:17 UTC] PHP Warning:  Use of undefined constant Hello - assumed 'Hello' (this will throw an Error in a future version of PHP) in /Users/theraycore/Local Sites/foodies/app/public/wp-content/themes/foodies-landing-theme/functions.php on line 211
+[14-Nov-2020 17:25:17 UTC] PHP Stack trace:
+[14-Nov-2020 17:25:17 UTC] PHP   1. {main}() /Users/theraycore/Local Sites/foodies/app/public/wp-admin/admin-ajax.php:0
+[14-Nov-2020 17:25:17 UTC] PHP   2. do_action() /Users/theraycore/Local Sites/foodies/app/public/wp-admin/admin-ajax.php:191
+[14-Nov-2020 17:25:17 UTC] PHP   3. WP_Hook->do_action() /Users/theraycore/Local Sites/foodies/app/public/wp-includes/plugin.php:478
+[14-Nov-2020 17:25:17 UTC] PHP   4. WP_Hook->apply_filters() /Users/theraycore/Local Sites/foodies/app/public/wp-includes/class-wp-hook.php:311
+[14-Nov-2020 17:25:17 UTC] PHP   5. get_menus_from_api() /Users/theraycore/Local Sites/foodies/app/public/wp-includes/class-wp-hook.php:287
+[14-Nov-2020 17:25:51 UTC] PHP Warning:  Use of undefined constant Hello - assumed 'Hello' (this will throw an Error in a future version of PHP) in /Users/theraycore/Local Sites/foodies/app/public/wp-content/themes/foodies-landing-theme/functions.php on line 211
+[14-Nov-2020 17:25:51 UTC] PHP Stack trace:
+[14-Nov-2020 17:25:51 UTC] PHP   1. {main}() /Users/theraycore/Local Sites/foodies/app/public/wp-admin/admin-ajax.php:0
+[14-Nov-2020 17:25:51 UTC] PHP   2. do_action() /Users/theraycore/Local Sites/foodies/app/public/wp-admin/admin-ajax.php:191
+[14-Nov-2020 17:25:51 UTC] PHP   3. WP_Hook->do_action() /Users/theraycore/Local Sites/foodies/app/public/wp-includes/plugin.php:478
+[14-Nov-2020 17:25:51 UTC] PHP   4. WP_Hook->apply_filters() /Users/theraycore/Local Sites/foodies/app/public/wp-includes/class-wp-hook.php:311
+[14-Nov-2020 17:25:51 UTC] PHP   5. get_menus_from_api() /Users/theraycore/Local Sites/foodies/app/public/wp-includes/class-wp-hook.php:287
+[14-Nov-2020 17:25:55 UTC] PHP Warning:  Use of undefined constant Hello - assumed 'Hello' (this will throw an Error in a future version of PHP) in /Users/theraycore/Local Sites/foodies/app/public/wp-content/themes/foodies-landing-theme/functions.php on line 211
+[14-Nov-2020 17:25:55 UTC] PHP Stack trace:
+[14-Nov-2020 17:25:55 UTC] PHP   1. {main}() /Users/theraycore/Local Sites/foodies/app/public/wp-admin/admin-ajax.php:0
+[14-Nov-2020 17:25:55 UTC] PHP   2. do_action() /Users/theraycore/Local Sites/foodies/app/public/wp-admin/admin-ajax.php:191
+[14-Nov-2020 17:25:55 UTC] PHP   3. WP_Hook->do_action() /Users/theraycore/Local Sites/foodies/app/public/wp-includes/plugin.php:478
+[14-Nov-2020 17:25:55 UTC] PHP   4. WP_Hook->apply_filters() /Users/theraycore/Local Sites/foodies/app/public/wp-includes/class-wp-hook.php:311
+[14-Nov-2020 17:25:55 UTC] PHP   5. get_menus_from_api() /Users/theraycore/Local Sites/foodies/app/public/wp-includes/class-wp-hook.php:287
+[14-Nov-2020 17:29:23 UTC] PHP Warning:  Use of undefined constant Hello - assumed 'Hello' (this will throw an Error in a future version of PHP) in /Users/theraycore/Local Sites/foodies/app/public/wp-content/themes/foodies-landing-theme/functions.php on line 216
+[14-Nov-2020 17:29:23 UTC] PHP Stack trace:
+[14-Nov-2020 17:29:23 UTC] PHP   1. {main}() /Users/theraycore/Local Sites/foodies/app/public/wp-admin/admin-ajax.php:0
+[14-Nov-2020 17:29:23 UTC] PHP   2. do_action() /Users/theraycore/Local Sites/foodies/app/public/wp-admin/admin-ajax.php:191
+[14-Nov-2020 17:29:23 UTC] PHP   3. WP_Hook->do_action() /Users/theraycore/Local Sites/foodies/app/public/wp-includes/plugin.php:478
+[14-Nov-2020 17:29:23 UTC] PHP   4. WP_Hook->apply_filters() /Users/theraycore/Local Sites/foodies/app/public/wp-includes/class-wp-hook.php:311
+[14-Nov-2020 17:29:23 UTC] PHP   5. get_menus_from_api() /Users/theraycore/Local Sites/foodies/app/public/wp-includes/class-wp-hook.php:287
+[14-Nov-2020 17:45:32 UTC] PHP Parse error:  syntax error, unexpected ''-'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in /Users/theraycore/Local Sites/foodies/app/public/wp-content/themes/foodies-landing-theme/functions.php on line 226

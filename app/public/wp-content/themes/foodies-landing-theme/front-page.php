@@ -161,9 +161,6 @@
 
 <!-- Mobile App -->
 <div class="section-mobile-app">
-
-  
-
   <!-- Columns -->
   <div class="columns">
     <div class="column left-image">     
