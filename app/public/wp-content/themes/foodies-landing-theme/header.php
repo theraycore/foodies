@@ -49,3 +49,8 @@
   </div>
 </section>
 <!-- /Hero -->
+
+
+<!-- Vue App Open -->
+<div id="app">
+<!-- /Vue App Open -->

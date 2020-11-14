@@ -1,5 +1,6 @@
 <?php get_header(); ?>
 
+
 <!-- About us -->
 <div class="columns section-about-us">
   <div class="column left-image is-7">
@@ -22,12 +23,18 @@
 
     <!-- Type Buttons -->
     <div class="columns is-mobile restaurants-types">
-      <div class="column is-active is-7">
+      <div class="column is-7" 
+        :class="{'is-active': (restaurants_search_type == 'takeaway')? true: false}"
+        @click="loadRestaurants('takeaway') "
+      >
         <p>            
           Para llevar
         </p>
       </div>
-      <div class="column">
+      <div class="column" 
+        :class="{'is-active': (restaurants_search_type == 'delivery')? true: false}"
+        @click="loadRestaurants('delivery') "
+      >
         <p>Domicilio</p>
       </div>
     </div>
@@ -41,54 +48,35 @@
       </figure>
       <div class="media-content">
         <div class="content">
-          <input type="text" placeholder="Buscar nombre o dirección" class="map_search_input">
+          <input type="text" v-model="restaurants_search_text" placeholder="Buscar nombre o dirección" class="map_search_input">
         </div>
       </div>
     </article>
 
     <!-- Search Results -->
     <div class="search-results">
-      <!-- Card Item -->
-      <div class="card is-selected">
-        <div class="card-content">
-          <label class="title">
-            Sucursal San Benito
-          </label>
-          <p class="address">
-            Abierto de 12:00 m.d. - 9:00 p.m.<br>
-            Calle la Reforma #543, Colonia San Benito
-          </p>
-        </div>        
-      </div>
-      <!-- /Card Item -->
 
-      <!-- Card Item -->
-      <div class="card">
-        <div class="card-content">
-          <label class="title">
-            Sucursal San Benito
-          </label>
-          <p class="address">
-            Abierto de 12:00 m.d. - 9:00 p.m.<br>
-            Calle la Reforma #543, Colonia San Benito
-          </p>
-        </div>        
-      </div>
-      <!-- /Card Item -->
-
-      <!-- Card Item -->
-      <div class="card">
-        <div class="card-content">
-          <label class="title">
-            Sucursal San Benito
-          </label>
-          <p class="address">
-            Abierto de 12:00 m.d. - 9:00 p.m.<br>
-            Calle la Reforma #543, Colonia San Benito
-          </p>
-        </div>        
-      </div>
-      <!-- /Card Item -->
+      <template v-if="restaurants.length > 0">
+        <template v-for="restaurant in restaurants">
+          <!-- Card Item -->
+          <div class="card is-selected">
+            <div class="card-content">
+              <label class="title">
+                {{ restaurant.name }}
+              </label>
+              <p class="address">
+                Abierto de {{ restaurant.opening_time }} - {{ restaurant.closing_time }}<br>
+                {{ restaurant.address }}
+              </p>
+            </div>        
+          </div>
+          <!-- /Card Item -->
+        </template>
+      </template>
+      <template v-else>
+        <div class="no-address"></div>
+        <h1 class="no-address-title">¡No hemos encontrado lo que buscas!</h1>
+      </template>
       
     </div>
 

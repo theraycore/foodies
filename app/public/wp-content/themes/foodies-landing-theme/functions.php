@@ -279,3 +279,51 @@ function get_menus_from_api () {
 }
 
 
+/**
+ * Wordpress Rest API
+ */
+
+add_action('wp_ajax_nopriv_get_locations', 'get_locations');
+add_action('wp_ajax_get_locations', 'get_locations');
+function get_locations () {
+  $locationType = $_GET['type'];
+
+  $resultArray = [];
+
+    $args = [
+      'post_type' =>  'location',
+      'order'     =>  'DESC'
+    ];
+
+    $the_query = new WP_QUERY($args);
+    if ($the_query->have_posts()) :
+      while($the_query->have_posts()):
+        $the_query->the_post();
+
+        $locationSlug = get_post_field( 'post_name' );
+        $existingLocation = get_page_by_path($locationSlug, 'OBJECT', 'location');
+
+        if ($existingLocation->type == $locationType) {
+          $resultArray[] = [
+            'id'            =>  $existingLocation->id,
+            'name'          =>  $existingLocation->name,
+            'opening_time'  =>  $existingLocation->opening_time,
+            'closing_time'  =>  $existingLocation->closing_time,
+            'address'       =>  $existingLocation->address,
+            'latitude'      =>  $existingLocation->latitude,
+            'longitude'     =>  $existingLocation->longitude,
+          ];
+          
+        }
+
+      endwhile;
+      wp_reset_postdata();
+    endif;
+
+    echo utf8_encode(json_encode($resultArray));
+
+    wp_die();
+}
+
+
+

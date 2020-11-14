@@ -12,6 +12,7 @@
     .restaurants-types
       border: 1px solid #C4C4C4
       margin-bottom: 0px
+      cursor: pointer
       
       .column        
         height: 64px
@@ -62,7 +63,18 @@
       padding-left: 102px
       padding-right: 22px
       position: relative
-      overflow: hidden
+      overflow: auto
+
+      .no-address
+        margin: 56px auto
+        width: 215.97px
+        height: 159.96px
+        background: $no-address
+
+      .no-address-title
+        @extend %primaryTitle
+        text-align: center
+        font-size: 20px
 
       .card
         margin-top: 15px
