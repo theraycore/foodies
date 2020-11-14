@@ -278,11 +278,24 @@ function get_menus_from_api () {
 
 }
 
+/**
+ * Message Custom Post Type
+ */
+add_action('init', 'register_message_cpt');
+
+function register_message_cpt () {
+  register_post_type('message', [
+    'label'           =>  'Foodie Contact Us Messages',
+    'public'          =>  true,
+    'capability_type' =>  'post'
+  ]);
+}
 
 /**
  * Wordpress Rest API
  */
 
+// Get Locations
 add_action('wp_ajax_nopriv_get_locations', 'get_locations');
 add_action('wp_ajax_get_locations', 'get_locations');
 function get_locations () {
@@ -325,5 +338,44 @@ function get_locations () {
     wp_die();
 }
 
+// Save Messages
+add_action('wp_ajax_nopriv_post_messages', 'post_messages');
+add_action('wp_ajax_post_messages', 'post_messages');
+function post_messages() {  
+  $name = $_POST['txt_name'];
+  $email = $_POST['txt_email'];
+  $message = $_POST['txt_message'];
+
+  $messageSlug = sanitize_title($email.'-'.rand());
+
+  $insertedMessage = wp_insert_post([
+    'post_name'   =>  $messageSlug,
+    'post_title'  =>  $messageSlug,
+    'post_type'   =>  'message',
+    'post_status' =>  'publish'
+  ]);
+
+  if (is_wp_error($insertedMessage)) {
+    echo json_encode([
+      'result' => 'error',      
+    ]);
+    die();
+  }
+
+  $fillable = [
+    'field_5fb03f9949275' =>  $name,        
+    'field_5fb03fa849276' =>  $email,        
+    'field_5fb03fb249277' =>  $message,                
+  ];
+
+  foreach ($fillable as $key => $value) {
+    update_field($key, $value, $insertedMessage);
+  }
+
+  echo json_encode([
+    'result' => 'success',
+  ]);
+  die();
+}
 
 
