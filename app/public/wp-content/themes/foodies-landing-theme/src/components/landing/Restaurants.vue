@@ -83,7 +83,7 @@ export default {
       let _this = this;
       this.restaurants_search_type = type;
 
-      axios.get('wp-admin/admin-ajax.php?action=get_locations&type='+type)
+      axios.get('http://'+window.location.host+'/wp-admin/admin-ajax.php?action=get_locations&type='+type)
         .then(response => {
           if (response.status == 200) {
             _this.restaurants = response.data;

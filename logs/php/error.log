@@ -116,3 +116,10 @@ Stack trace:
 [14-Nov-2020 17:29:23 UTC] PHP   5. get_menus_from_api() /Users/theraycore/Local Sites/foodies/app/public/wp-includes/class-wp-hook.php:287
 [14-Nov-2020 17:45:32 UTC] PHP Parse error:  syntax error, unexpected ''-'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in /Users/theraycore/Local Sites/foodies/app/public/wp-content/themes/foodies-landing-theme/functions.php on line 226
 [14-Nov-2020 21:53:31 UTC] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE), expecting end of file in /Users/theraycore/Local Sites/foodies/app/public/wp-content/themes/foodies-landing-theme/header.php on line 44
+[14-Nov-2020 22:15:18 UTC] PHP Fatal error:  Cannot redeclare get_locations() (previously declared in /Users/theraycore/Local Sites/foodies/app/public/wp-content/themes/foodies-landing-theme/functions.php:301) in /Users/theraycore/Local Sites/foodies/app/public/wp-content/themes/foodies-landing-theme/functions.php on line 422
+[14-Nov-2020 22:15:18 UTC] PHP Stack trace:
+[14-Nov-2020 22:15:18 UTC] PHP   1. {main}() /Users/theraycore/Local Sites/foodies/app/public/wp-admin/index.php:0
+[14-Nov-2020 22:15:18 UTC] PHP   2. require_once() /Users/theraycore/Local Sites/foodies/app/public/wp-admin/index.php:10
+[14-Nov-2020 22:15:18 UTC] PHP   3. require_once() /Users/theraycore/Local Sites/foodies/app/public/wp-admin/admin.php:34
+[14-Nov-2020 22:15:18 UTC] PHP   4. require_once() /Users/theraycore/Local Sites/foodies/app/public/wp-load.php:37
+[14-Nov-2020 22:15:18 UTC] PHP   5. require_once() /Users/theraycore/Local Sites/foodies/app/public/wp-config.php:77

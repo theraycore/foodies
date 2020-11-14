@@ -378,4 +378,40 @@ function post_messages() {
   die();
 }
 
+// Get Menus
+add_action('wp_ajax_nopriv_get_menus', 'get_menus');
+add_action('wp_ajax_get_menus', 'get_menus');
+function get_menus () {
+  $locationType = $_GET['type'];
 
+  $resultArray = [];
+
+    $args = [
+      'post_type' =>  'menu',
+      'order'     =>  'DESC'
+    ];
+
+    $the_query = new WP_QUERY($args);
+    if ($the_query->have_posts()) :
+      while($the_query->have_posts()):
+        $the_query->the_post();
+
+        $menuSlug = get_post_field( 'post_name' );
+        $existingMenu = get_page_by_path($menuSlug, 'OBJECT', 'menu');
+        
+        $resultArray[] = [            
+          'name'          =>  $existingMenu->name,
+          'image'         =>  $existingMenu->image,
+          'description'   =>  $existingMenu->description,
+          'price'         =>  $existingMenu->price,
+          'category'      =>  $existingMenu->category,            
+        ];
+
+      endwhile;
+      wp_reset_postdata();
+    endif;
+
+    echo utf8_encode(json_encode($resultArray));
+
+    wp_die();
+}

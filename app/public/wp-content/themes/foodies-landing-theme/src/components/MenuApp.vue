@@ -1,10 +1,17 @@
 <template>
-  <div></div>  
+  <div>
+    <show-menus>
+    </show-menus>  
+  </div>  
 </template>
 
 <script>
-export default {
+import ShowMenus from './menu/ShowMenus.vue';
 
+export default {
+  components: {
+    ShowMenus
+  }
 }
 </script>
 
