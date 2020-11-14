@@ -1,0 +1,44 @@
+%primaryTitle
+  font-family: 'druktext'
+  font-weight: 700
+  color: $color-primary
+
+%secondaryTitle
+  font-family: 'syne'
+  color: $color-primary
+  font-weight: 700
+
+%actionLink
+  font-family: 'syne'
+  font-weight: 700
+  top: 46px
+  position: relative
+  font-size: 22px
+  color: $color-primary
+  text-decoration: none
+
+%normalParagraph
+  font-family: 'open-sans'
+  font-weight: 400
+  font-size: 18px
+  line-height: 24.51px
+  color: $color-secondary
+
+%feedNavButtons    
+  width: 24px
+  height: 24px
+  border: none
+  background-size: 100%
+  background-repeat: no-repeat !important
+  background-position-x: center !important
+  background-position-y: 3px !important
+  cursor: pointer !important
+
+%contactInput
+  @extend %normalParagraph
+  background: rgba(0,0,0,0)
+  color: white
+  border: 1px solid white
+
+  &::placeholder
+    color: #595959

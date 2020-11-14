@@ -1,0 +1,87 @@
+
+.section-feedbacks
+  margin-top: 0px
+  min-height: 640px
+  max-height: 640px
+  // background: orange
+  overflow: visible
+  position: relative
+  padding-top: 288px
+
+  &::before
+    z-index: 1
+    background-image: $feed_splash1
+    background-repeat: no-repeat
+    content: ""
+    width: 195.35px
+    height: 546.41px    
+    position: absolute
+    top: 80px
+    left: 0px
+
+  .ketchup-img
+    z-index: 4
+    background-image: $ketchup_img
+    background-repeat: no-repeat
+    content: ""
+    width: 632px
+    height: 762.27px    
+    position: absolute
+    top: 29px
+    right: -175px
+
+  &::after
+    z-index: 3
+    background-image: $feed_splash2
+    background-repeat: no-repeat
+    content: ""
+    width: 210.76px
+    height: 546.41px    
+    position: absolute
+    top: 146px
+    right: 0px  
+    
+
+  h1.feed-title    
+    @extend %primaryTitle    
+    font-size: 36px
+    text-align: center
+    margin: 0px auto
+    max-width: 744px
+    margin-bottom: 0px
+    position: relative
+
+  p.feed-paragraph
+    @extend %normalParagraph
+    margin: 0px auto
+    margin-top: 19px
+    max-width: 549px
+    font-size: 18px
+    text-align: center
+
+  .flow-control
+    @extend %secondaryTitle
+    color: $color-primary-low
+    font-size: 20px 
+    margin-top: 61px
+    width: 100%
+    display: inline-block
+    text-align: center
+    vertical-align: top
+
+    button        
+      &.btn-left
+        background: $left-icon
+        @extend %feedNavButtons 
+
+        &:hover
+          background: $left-icon-active !important
+
+      &.btn-right
+        background: $right-icon
+        @extend %feedNavButtons
+
+        &:hover
+          background: $right-icon-active !important
+
+

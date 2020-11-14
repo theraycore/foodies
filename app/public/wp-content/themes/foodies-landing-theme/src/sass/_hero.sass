@@ -1,0 +1,42 @@
+body
+  
+  &::before
+    content: ""
+    width: 792px
+    height: 794px
+    position: absolute
+    top: 0
+    right: 0
+    z-index: -1
+    background-image: $hero_splash1
+
+.hero
+  .hero-body
+    padding-left: 0px
+    padding-right: 0px
+
+    .container
+      padding-top: 173px
+
+      margin-left: 102px
+      max-width: 600px
+
+      h1.title
+        @extend %primaryTitle
+        font-size: 60px
+        
+      p
+        @extend %normalParagraph
+
+      .hero-btn 
+        @extend %actionLink
+
+    .side-image
+      .image
+        width: 567px
+        height: 446.26px
+        margin: 20px auto
+        background-image: $hero_hamburger1
+    
+
+

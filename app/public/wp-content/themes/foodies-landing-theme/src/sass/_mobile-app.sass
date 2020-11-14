@@ -1,0 +1,134 @@
+
+.section-mobile-app
+  min-height: 785px
+  // background: orange
+  position: relative
+
+  .phone-image-anchor    
+    width: 100px
+    height: 100px
+    // background: white
+    margin: 0 auto
+    overflow: visible
+    position: relative
+
+    &::before
+      z-index: 2
+      content: ""
+      width: 1575.77px
+      height: 1031px
+      background: $mobile-app-img
+      position: absolute
+      top: -100px
+      left: -550%            
+
+  .left-image
+    height: 700px
+    // background: red
+    position: relative
+    overflow: visible    
+
+  .right-content
+    z-index: 3
+    height: 700px
+    // background: purple
+    
+    .features-anchor
+      width: 100px
+      height: 100px
+      // background: white
+      margin: 0 auto
+      overflow: visible
+      position: relative
+
+      .features-content
+        // background: pink
+        width: 708.77px
+        min-height: 479.8px
+        position: absolute
+        left: -400%
+        top: 90px
+
+        h1.title
+          @extend %primaryTitle
+          z-index: 2
+          max-width: 542px
+          font-size: 35px
+          line-height: 35px
+          text-align: center
+          position: relative 
+          margin-left: 30px                 
+
+          &::before
+            background: $bar-splash2-1
+            position: absolute
+            content: ""
+            z-index: -1
+            width: 558.15px
+            height: 54px
+            top: 21px
+              left: -7px
+        
+        .features-numbers
+          margin-top: 42px
+          margin-left: 0px
+          width: 100%          
+          // background: blue
+
+          #feature-item-03
+            margin-top: 28px
+            padding-right: 35px
+
+          .feature-item
+            max-width: 322px
+            margin: 0 auto
+
+            .circle-number
+              position: relative
+              font-family: 'roboto'
+              font-weight: 700
+              font-size: 24px
+              color: white
+              margin: 0 auto
+              padding-top: 5px
+              width: 46px
+              height: 46px
+              background: $color-splash
+              border-radius: 50%
+              text-align: center
+
+              &#circle-number-01::before
+                z-index: -1
+                content: ""
+                background: $arrows1-img
+                width: 211px
+                height: 248px
+                position: absolute
+                top: 12px
+                left: -55px
+
+              &#circle-number-02::before
+                z-index: -1
+                content: ""
+                background: $arrows2-img
+                width: 253px
+                height: 248px
+                position: absolute
+                top: 13px
+                left: -147px
+                                
+            .title
+              font-family: 'roboto'
+              font-weight: 700
+              text-align: center
+              font-size: 22px
+              margin-top: 19px
+              margin-bottom: 0px
+
+            p
+              font-family: 'roboto'
+              font-size: 18px
+              line-height: 21.09px
+              margin-top: 27px
+              text-align: center
+
