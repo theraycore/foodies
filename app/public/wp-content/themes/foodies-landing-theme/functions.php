@@ -278,4 +278,140 @@ function get_menus_from_api () {
 
 }
 
+/**
+ * Message Custom Post Type
+ */
+add_action('init', 'register_message_cpt');
 
+function register_message_cpt () {
+  register_post_type('message', [
+    'label'           =>  'Foodie Contact Us Messages',
+    'public'          =>  true,
+    'capability_type' =>  'post'
+  ]);
+}
+
+/**
+ * Wordpress Rest API
+ */
+
+// Get Locations
+add_action('wp_ajax_nopriv_get_locations', 'get_locations');
+add_action('wp_ajax_get_locations', 'get_locations');
+function get_locations () {
+  $locationType = $_GET['type'];
+
+  $resultArray = [];
+
+    $args = [
+      'post_type' =>  'location',
+      'order'     =>  'DESC'
+    ];
+
+    $the_query = new WP_QUERY($args);
+    if ($the_query->have_posts()) :
+      while($the_query->have_posts()):
+        $the_query->the_post();
+
+        $locationSlug = get_post_field( 'post_name' );
+        $existingLocation = get_page_by_path($locationSlug, 'OBJECT', 'location');
+
+        if ($existingLocation->type == $locationType) {
+          $resultArray[] = [
+            'id'            =>  $existingLocation->id,
+            'name'          =>  $existingLocation->name,
+            'opening_time'  =>  $existingLocation->opening_time,
+            'closing_time'  =>  $existingLocation->closing_time,
+            'address'       =>  $existingLocation->address,
+            'latitude'      =>  $existingLocation->latitude,
+            'longitude'     =>  $existingLocation->longitude,
+          ];
+          
+        }
+
+      endwhile;
+      wp_reset_postdata();
+    endif;
+
+    echo utf8_encode(json_encode($resultArray));
+
+    wp_die();
+}
+
+// Save Messages
+add_action('wp_ajax_nopriv_post_messages', 'post_messages');
+add_action('wp_ajax_post_messages', 'post_messages');
+function post_messages() {  
+  $name = $_POST['txt_name'];
+  $email = $_POST['txt_email'];
+  $message = $_POST['txt_message'];
+
+  $messageSlug = sanitize_title($email.'-'.rand());
+
+  $insertedMessage = wp_insert_post([
+    'post_name'   =>  $messageSlug,
+    'post_title'  =>  $messageSlug,
+    'post_type'   =>  'message',
+    'post_status' =>  'publish'
+  ]);
+
+  if (is_wp_error($insertedMessage)) {
+    echo json_encode([
+      'result' => 'error',      
+    ]);
+    die();
+  }
+
+  $fillable = [
+    'field_5fb03f9949275' =>  $name,        
+    'field_5fb03fa849276' =>  $email,        
+    'field_5fb03fb249277' =>  $message,                
+  ];
+
+  foreach ($fillable as $key => $value) {
+    update_field($key, $value, $insertedMessage);
+  }
+
+  echo json_encode([
+    'result' => 'success',
+  ]);
+  die();
+}
+
+// Get Menus
+add_action('wp_ajax_nopriv_get_menus', 'get_menus');
+add_action('wp_ajax_get_menus', 'get_menus');
+function get_menus () {
+  $locationType = $_GET['type'];
+
+  $resultArray = [];
+
+    $args = [
+      'post_type' =>  'menu',
+      'order'     =>  'DESC'
+    ];
+
+    $the_query = new WP_QUERY($args);
+    if ($the_query->have_posts()) :
+      while($the_query->have_posts()):
+        $the_query->the_post();
+
+        $menuSlug = get_post_field( 'post_name' );
+        $existingMenu = get_page_by_path($menuSlug, 'OBJECT', 'menu');
+        
+        $resultArray[] = [            
+          'name'          =>  $existingMenu->name,
+          'image'         =>  $existingMenu->image,
+          'description'   =>  $existingMenu->description,
+          'price'         =>  $existingMenu->price,
+          'category'      =>  $existingMenu->category,            
+        ];
+
+      endwhile;
+      wp_reset_postdata();
+    endif;
+
+    echo utf8_encode(json_encode($resultArray));
+
+    wp_die();
+}
