@@ -199,8 +199,8 @@
             </div>
             <div class="columns">            
               <!-- 3 -->
-              <div class="column">
-                <div class='feature-item' id="feature-item-03">
+              <div class="column" id="feature-item-03">
+                <div class='feature-item' >
                   <div class="circle-number">03</div>
                   <h2 class="title">Promociones especiales</h2>
                   <p>Curabitur in eleifend turpis, id vehicula odio. Donec pulvinar tellus eget magna aliquet ultricies.</p>
