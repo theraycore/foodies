@@ -1,5 +1,5 @@
 <template>
-  <div class="section-contact-us">
+  <div class="section-contact-us" id="section-contact-us">
 
     <template v-if="!contact_us_submited">
       <!-- titles -->

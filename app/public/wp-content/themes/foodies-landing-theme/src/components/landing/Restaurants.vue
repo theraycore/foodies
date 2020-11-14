@@ -1,5 +1,5 @@
 <template>
-  <div class="columns section-restaurants">
+  <div class="columns section-restaurants" id="section-restaurants">
     <div class="column left-form">
       <h1 class="title">Estamos para ti</h1>
 

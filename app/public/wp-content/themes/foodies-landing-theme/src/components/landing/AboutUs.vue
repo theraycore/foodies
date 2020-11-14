@@ -1,5 +1,5 @@
 <template>
-  <div class="columns section-about-us">
+  <div class="columns section-about-us" id="section-about-us">
     <div class="column left-image is-7">
       <h1>LA COMIDA ES <span>NUESTRO ARTE</span></h1>
     </div>
